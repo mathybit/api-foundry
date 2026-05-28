@@ -45,7 +45,7 @@ def create_service_blueprints():
             result = g.wrapper_instance.predict(payload)
             return jsonify(json.loads(result))
         except ValidationError as e:
-            return jsonify({"error": "Validation failed", "details": e.errors()}), 422
+            return jsonify({"error": "Validation failed", "details": str(e)}), 422
         except Exception as e:
             return jsonify({"error": str(e)}), 500
 
@@ -60,7 +60,7 @@ def create_service_blueprints():
             result = g.wrapper_instance.compute(payload)
             return jsonify(json.loads(result))
         except ValidationError as e:
-            return jsonify({"error": "Validation failed", "details": e.errors()}), 422
+            return jsonify({"error": "Validation failed", "details": str(e)}), 422
         except Exception as e:
             return jsonify({"error": str(e)}), 500
 
