@@ -1,4 +1,4 @@
-# pip dependencies for pytorch-foundry
+# pip dependencies for api-foundry
 # Install after creating the conda environment: pip install -r conda/requirements.txt
 #
 # PyTorch is NOT listed here -- install it separately (see conda/README.md).
