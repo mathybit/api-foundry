@@ -66,12 +66,13 @@ resdict = response.json()
 print('JSON:\n', json.dumps(resdict, indent=2))
 
 
+
 print('\n' + '=' * 80)
 print('POST:', COMPUTE_ENDPOINT)
 
 # Construct the payload
 payload = {
-    'input': np.random.randint(0, int(1e9)),
+    'value': np.random.randint(0, int(1e9)),
     'request_id': np.random.randint(0, int(1e9))
 }
 print('Payload:', json.dumps(payload, indent=2))
@@ -79,5 +80,46 @@ print('Payload:', json.dumps(payload, indent=2))
 response = requests.post(BASE_URL + COMPUTE_ENDPOINT, json=payload, verify=False)
 print('Status:', response.status_code, 'Reason:', response.reason)
 print('Response:', response.text)
-resdict = response.json()
-print('JSON:\n', json.dumps(resdict, indent=2))
+if response.status_code == 200:
+    resdict = response.json()
+    print('JSON:\n', json.dumps(resdict, indent=2))
+
+
+
+print('\n' + '=' * 80)
+print('POST:', COMPUTE_ENDPOINT)
+
+# Construct the payload
+payload = {
+    'value': 1000,
+    'root': 3,
+    'request_id': np.random.randint(0, int(1e9))
+}
+print('Payload:', json.dumps(payload, indent=2))
+
+response = requests.post(BASE_URL + COMPUTE_ENDPOINT, json=payload, verify=False)
+print('Status:', response.status_code, 'Reason:', response.reason)
+print('Response:', response.text)
+if response.status_code == 200:
+    resdict = response.json()
+    print('JSON:\n', json.dumps(resdict, indent=2))
+
+
+
+print('\n' + '=' * 80)
+print('POST:', COMPUTE_ENDPOINT)
+
+# Construct the payload
+payload = {
+    'value': 1000,
+    'root': 0,
+    'request_id': np.random.randint(0, int(1e9))
+}
+print('Payload:', json.dumps(payload, indent=2))
+
+response = requests.post(BASE_URL + COMPUTE_ENDPOINT, json=payload, verify=False)
+print('Status:', response.status_code, 'Reason:', response.reason)
+print('Response:', response.text)
+if response.status_code == 200:
+    resdict = response.json()
+    print('JSON:\n', json.dumps(resdict, indent=2))
