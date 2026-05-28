@@ -16,6 +16,9 @@ pydantic>=2.13
 pillow>=10.2
 opencv-python>=4.9
 
+# NLP-related stuff
+nltk>=3.9
+
 # Configuration parsing
 pyyaml>=6.0
 
