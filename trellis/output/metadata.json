@@ -1,0 +1,27 @@
+{
+  "vocab_size": 2000,
+  "n_classes": 10,
+  "classes": [
+    "business",
+    "entertainment",
+    "food",
+    "graphics",
+    "historical",
+    "medical",
+    "politics",
+    "space",
+    "sport",
+    "technologie"
+  ],
+  "cv_accuracy": 0.9700000000000001,
+  "cv_std": 0.018708286933869722,
+  "SVC_C": 1.0,
+  "SVC_MAX_ITER": 5000,
+  "SVC_CLASS_WEIGHT": "balanced",
+  "TFIDF_MAX_FEATURES": 2000,
+  "TFIDF_MIN_DF": 2,
+  "TFIDF_MAX_DF": 0.95,
+  "TFIDF_SUBLINEAR_TF": true,
+  "CALIBRATION_METHOD": "sigmoid",
+  "CALIBRATION_CV_FOLDS": 5
+}
