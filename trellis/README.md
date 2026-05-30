@@ -45,6 +45,17 @@ Each class directory contains `.txt` files with the text samples for that catego
 
 All commands are run from the `trellis/` directory.
 
+### NLTK data
+
+The preprocessing pipeline requires three NLTK data packages. Run this once before any script:
+
+```python
+import nltk
+nltk.download('punkt_tab')
+nltk.download('stopwords')
+nltk.download('wordnet')
+```
+
 ### 1. Generate episodes
 
 ```bash
